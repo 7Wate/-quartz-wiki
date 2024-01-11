@@ -30,6 +30,7 @@ export default (() => {
         <meta name="generator" content="Quartz" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <script async src="https://umami.7wate.com/script.js" data-website-id="c061efdc-95dd-4d21-9d04-a1ffda0a85b9"></script>
         {css.map((href) => (
           <link key={href} href={href} rel="stylesheet" type="text/css" spa-preserve />
         ))}
