@@ -8,6 +8,7 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   footer: Component.Footer({
     links: {
+      "Home": "https://www.7wate.com",
       "Blog": "https://blog.7wate.com",
       GitHub: "https://github.com/7wate",
     },
@@ -41,6 +42,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
+    Component.MobileOnly(Component.Explorer()),
   ],
 }
 
