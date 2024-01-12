@@ -31,6 +31,24 @@ export default (() => {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <script async src="https://umami.7wate.com/script.js" data-website-id="c061efdc-95dd-4d21-9d04-a1ffda0a85b9"></script>
+        <script>
+          var _hmt = _hmt || [];
+          (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?94d8ccb156eb7c65abf317e6e01cdba9";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+          })();
+        </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MHMEL0F832"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-MHMEL0F832');
+        </script>
+
         {css.map((href) => (
           <link key={href} href={href} rel="stylesheet" type="text/css" spa-preserve />
         ))}
