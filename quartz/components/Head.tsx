@@ -30,8 +30,9 @@ export default (() => {
         <meta name="generator" content="Quartz" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
+
         <script async src="https://umami.7wate.com/script.js" data-website-id="c061efdc-95dd-4d21-9d04-a1ffda0a85b9"></script>
-        <script>
+        <script dangerouslySetInnerHTML={{ __html: `
           var _hmt = _hmt || [];
           (function() {
             var hm = document.createElement("script");
@@ -39,15 +40,19 @@ export default (() => {
             var s = document.getElementsByTagName("script")[0]; 
             s.parentNode.insertBefore(hm, s);
           })();
-        </script>
+        `}} />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-MHMEL0F832"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+        <script dangerouslySetInnerHTML={{ __html: `
+          (function() {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              window.dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-MHMEL0F832');
+          })();
+        `}} />
 
-          gtag('config', 'G-MHMEL0F832');
-        </script>
 
         {css.map((href) => (
           <link key={href} href={href} rel="stylesheet" type="text/css" spa-preserve />
