@@ -7,10 +7,13 @@ const config: QuartzConfig = {
     enableSPA: true,
     enablePopovers: true,
     analytics: null,
+    locale: "zh-CN",
     baseUrl: "wiki.7wate.com",
     ignorePatterns: ["private", "Templates", ".obsidian", "Canvas", "Static"],
     defaultDateType: "created",
     theme: {
+      fontOrigin: "googleFonts",
+      cdnCaching: true,
       typography: {
         header: "Schibsted Grotesk",
         body: "Source Sans Pro",
@@ -47,7 +50,13 @@ const config: QuartzConfig = {
       Plugin.CreatedModifiedDate({
         priority: ["frontmatter", "filesystem"], // you can add 'git' here for last modified from Git but this makes the build slower
       }),
-      Plugin.SyntaxHighlighting(),
+      Plugin.SyntaxHighlighting({
+        theme: {
+          light: "github-light",
+          dark: "github-dark",
+        },
+        keepBackground: false,
+      }),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
@@ -57,7 +66,7 @@ const config: QuartzConfig = {
     filters: [Plugin.RemoveDrafts()],
     emitters: [
       Plugin.AliasRedirects(),
-      Plugin.ComponentResources({ fontOrigin: "googleFonts" }),
+      Plugin.ComponentResources(),
       Plugin.ContentPage(),
       Plugin.FolderPage(),
       Plugin.TagPage(),
